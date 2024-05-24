@@ -55,11 +55,14 @@ collections:
           required: false,
           field: 
             {
-             label: 'egyseg Category',
-             name: 'egyseg',
-             widget: 'select',
-             default: 'g',
-             options: [{ label: 'Kg', value: 'kg' }, { label: 'gram', value: 'g' }, { label: 'Csipet', value: 'pinch' }],
+             label: "Navigation"
+              name: "eleventyNavigation"
+              widget: "object"
+              fields:
+                - { label: "Key", name: "key", widget: "string", hint: "A unique string for your navigation item, typically the page slug." }
+                - { label: "Title", name: "title", widget: "string", hint: "The visible title of the navigation item." }
+                - { label: "Order", name: "order", widget: "number", default: 999, hint: "Set a number between 0 and 999 to set the display order of your navigation item." }
+              - { label: "Body", name: "body", widget: "markdown", hint: "Plain text, Markdown, and HTML formatting is supported. See the Markdown cheat sheet: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" }
             }
         }
   - name: 'projects'
