@@ -53,9 +53,7 @@ collections:
           name: 'ingri',
           widget: 'list',
           required: false,
-          fields:
-            - { label: 'Title', name: 'title', widget: 'string', required: false }
-            - { label: 'Title2', name: 'title2', widget: 'string', required: false }
+          field: { label: 'Title', name: 'title', widget: 'string', required: false },
         }
   - name: 'projects'
     label: 'Projects'
