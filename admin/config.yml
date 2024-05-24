@@ -51,19 +51,14 @@ collections:
       - {
           label: 'ingri',
           name: 'ingri',
-          widget: 'list',
-          required: false,
-          field: 
-            {
-             label: "Navigation"
-              name: "eleventyNavigation"
-              widget: "object"
-              fields:
-                - { label: "Key", name: "key", widget: "string", hint: "A unique string for your navigation item, typically the page slug." }
-                - { label: "Title", name: "title", widget: "string", hint: "The visible title of the navigation item." }
-                - { label: "Order", name: "order", widget: "number", default: 999, hint: "Set a number between 0 and 999 to set the display order of your navigation item." }
-              - { label: "Body", name: "body", widget: "markdown", hint: "Plain text, Markdown, and HTML formatting is supported. See the Markdown cheat sheet: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" }
-            }
+          widget: 'list'
+            types:
+              - label: 'Spotlight'
+                name: 'spotlight'
+                widget: object
+                fields:
+                  - { label: Header, name: header, widget: string, default: 'Spotlight' }
+                  - { label: 'Content', name: 'body', widget: 'markdown', required: false }  
         }
   - name: 'projects'
     label: 'Projects'
@@ -84,18 +79,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
-      - { label: 'Content', name: 'body', widget: 'markdown', required: false }
-      - {
-          label: 'Gallery',
-          name: 'gallery',
-          widget: 'list'
-            types:
-              - label: 'Spotlight'
-                name: 'spotlight'
-                widget: object
-                fields:
-                  - { label: Header, name: header, widget: string, default: 'Spotlight' }
-                  - { label: 'Content', name: 'body', widget: 'markdown', required: false }   
+      - { label: 'Content', name: 'body', widget: 'markdown', required: false } 
   - name: "pages"
     label: "Pages"
     label_singular: "Page"
