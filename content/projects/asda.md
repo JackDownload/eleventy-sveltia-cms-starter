@@ -1,5 +1,5 @@
 ---
-category: animals
+category: food
 title: asda
 description: ""
 cover: ""
