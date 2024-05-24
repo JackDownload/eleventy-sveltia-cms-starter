@@ -41,6 +41,19 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+          fields:
+            - { label: 'Hozzavaló', name: 'ingridient', widget: 'string', required: true }
+            - { label: 'Mennyiség', name: 'amount', widget: 'number', required: true }
+            - { label: 'Esgység', name: 'type', widget: 'number', required: true }
+                fields:
+                  - {
+                      label: 'Esgység Category',
+                      name: 'type',
+                      widget: 'select',
+                      default: 'g',
+                      options: [{ label: 'Kg', value: 'kg' }, { label: 'gram', value: 'g' }, { label: 'Csipet', value: 'pinch' }],
+                    }
+        }
   - name: 'projects'
     label: 'Projects'
     label_singular: 'Project'
