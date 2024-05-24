@@ -88,11 +88,14 @@ collections:
       - {
           label: 'Gallery',
           name: 'gallery',
-          widget: 'list',
-          required: false,
-          summary: '{{fields.image}}',
-          field: { label: 'Image', name: 'image', widget: 'image' },
-        }      
+          widget: 'list'
+            types:
+              - label: 'Spotlight'
+                name: 'spotlight'
+                widget: object
+                fields:
+                  - { label: Header, name: header, widget: string, default: 'Spotlight' }
+                  - { label: 'Content', name: 'body', widget: 'markdown', required: false }   
   - name: "pages"
     label: "Pages"
     label_singular: "Page"
