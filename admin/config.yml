@@ -7,9 +7,9 @@
 
 # Enter your GitHub repo path and branch (defaults to master)
 backend:
-  name: github
-  repo: danurbanowicz/eleventy-sveltia-cms-starter
-  branch: master
+  name: github 
+  repo: JackDownload/eleventy-sveltia-cms-starter # Path to your GitHub repository
+  branch: master # Optional, defaults to master
 
 # The folder used to store uploaded images
 media_folder: "assets/img"
