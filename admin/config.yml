@@ -54,6 +54,7 @@ collections:
           widget: 'list',
           required: false,
           field: { label: 'Title', name: 'title', widget: 'string', required: false },
+          field: { label: 'Titleee', name: 'titleee', widget: 'string', required: false },
         }
   - name: 'projects'
     label: 'Projects'
