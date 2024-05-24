@@ -42,13 +42,11 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - {
-          label: 'Hozzzavalok',
-          name: 'ingridients',
-          widget: 'list',
-          required: false,
-          fields:
-            - { label: 'Hozzavaló', name: 'ingridient', widget: 'string', required: false }
-            - { label: 'Mennyiség', name: 'amount', widget: 'string', required: false }
+         label: 'egyseg Category',
+         name: 'egyseg',
+         widget: 'select',
+         default: 'g',
+         options: [{ label: 'Kg', value: 'kg' }, { label: 'gram', value: 'g' }, { label: 'Csipet', value: 'pinch' }],
         }
   - name: 'projects'
     label: 'Projects'
