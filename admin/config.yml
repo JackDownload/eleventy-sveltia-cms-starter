@@ -53,8 +53,9 @@ collections:
           name: 'ingri',
           widget: 'list',
           required: false,
-          summary: '{{fields.image}}',
-          field: { label: 'Image', name: 'image', widget: 'image' },
+          fields:
+            - { label: 'Title', name: 'title', widget: 'string', required: false }
+            - { label: 'Title2', name: 'title2', widget: 'string', required: false }
         }
   - name: 'projects'
     label: 'Projects'
